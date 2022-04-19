@@ -1,12 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TiposDeDatos - JS</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipos de datos - JS</title>
+  </head>
+  <body>
+    <h1>Tipos de datos en JavaScript</h1>
+    <ul>
+      <li>
+        <p>Primitivos: Se accede directamente al valor.</p>
+        <p>Se comparan por el valor</p>
+      </li>
+      <ul>
+        <li>
+          <p>String</p>
+        </li>
+        <li>
+          <p>Number</p>
+        </li>
+        <li>
+          <p>Boolean</p>
+        </li>
+        <li>
+          <p>Null</p>
+        </li>
+        <li>
+          <p>Underfined</p>
+        </li>
+        <li>
+          <p>NaN</p>
+        </li>
+      </ul>
+      <li>
+        <p>Compuestos: Se accede a la referencia del valor.</p>
+        <p>
+          Se comparan por la referencia. (Como le apunta a otro lugar una
+          comparacion de esto demostraria que son diferentes, ya que "A donde
+          apuntan" es diferente)
+        </p>
+      </li>
+      <ul>
+        <li>
+          <p>Object = {}</p>
+        </li>
+        <li>
+          <p>Array = []</p>
+        </li>
+        <li>
+          <p>Function () {}</p>
+        </li>
+        <li>
+          <p>Class {}</p>
+        </li>
+        <li>
+          <p>Etc.</p>
+        </li>
+      </ul>
+    </ul>
+    <script>
+      // VAR
+      var hola = "Hola Mundo";
+      var global = "Ambito global (Objeto Window) - Pre-ecmascript6";
+      //No usar Var JAMAS - Mala practica.
+      //LET
+      let bloque = "Ambito de bloque (Como otros lenguajes.)";
+      console.log(hola, global, bloque); //Concatenación con espacios.
+      //CONST
+      const PI = 3.1416;
+      /* Las variables de tipo const no pueden definirsen sin asignarles
+      un valor, tampoco se le puede reasignar el valor en VARIABLES PRIMITIVAS. */
+      console.log(PI);
+      let object = {
+        nombre: "Daniel",
+        edad: 35,
+      };
+      const colores = ["Blanco", "Negro"];
+      console.log(object);
+      console.log(colores);
+      object.correo = "correo@gmail.com";
+      colores.push("Gris");
+      console.log(object);
+      console.log(colores);
+      // TODO ES UN OBJECTO
+      console.log(
+        "La diferencia entre los metodos y los atributos en JS \n se evidencia cuando los metodos tienen el () y los atributos NO"
+      );
+    </script>
+  </body>
 </html>
